@@ -1,0 +1,91 @@
+﻿<Window x:Class="Notepad.Views.FindDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Find"
+        Height="180"
+        Width="380"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+
+    <Grid Margin="16">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    Margin="0,0,0,10">
+
+            <TextBlock Text="Find:"
+                       Width="70"
+                       VerticalAlignment="Center" />
+
+            <TextBox Width="200"
+                     Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" />
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    Margin="0,0,0,10">
+
+            <TextBlock Text="Search in:"
+                       Width="70"
+                       VerticalAlignment="Center" />
+
+            <RadioButton Content="Selected tab"
+                         GroupName="SearchScope"
+                         Margin="0,0,10,0"
+                         IsChecked="{Binding SearchInSelectedTab, Mode=TwoWay}" />
+
+            <RadioButton Content="All tabs"
+                         GroupName="SearchScope"
+                         IsChecked="{Binding SearchInAllTabs, Mode=TwoWay}" />
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    Margin="0,0,0,10">
+
+            <TextBlock Text="{Binding ResultLabel}"
+                       Width="150"
+                       VerticalAlignment="Center"
+                       Foreground="Gray"
+                       FontSize="12" />
+
+            <Button Content="◄"
+                    Width="30"
+                    Margin="0,0,4,0"
+                    Command="{Binding PreviousCommand}" />
+
+            <Button Content="►"
+                    Width="30"
+                    Command="{Binding NextCommand}" />
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="3"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+
+            <Button Content="Find"
+                    Width="80"
+                    Margin="0,0,8,0"
+                    Command="{Binding FindCommand}"
+                    IsDefault="True" />
+
+            <Button Content="Close"
+                    Width="80"
+                    IsCancel="True"
+                    Click="CloseButton_Click" />
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>
