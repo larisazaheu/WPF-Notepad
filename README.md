@@ -3,7 +3,7 @@
 Developed a modern text editor built using **C#**, **WPF**, and the **MVVM architecture pattern**.
 It extends the classic Notepad experience with tabs, file explorer integration, and powerful text editing tools.
 
-<img width="984" height="555" alt="notepad" src="https://github.com/user-attachments/assets/d97f1689-26aa-4eea-b055-e196ad9d4ac5" />
+<img width="984" height="555" alt="notepad" src="https://github.com/user-attachments/assets/1efd9177-ad22-4b4e-9c03-7abf1e6a9e33" />
 
 ---
 
