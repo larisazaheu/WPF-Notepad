@@ -87,11 +87,3 @@ The project follows the **MVVM (Model-View-ViewModel)** pattern:
 * C#
 * WPF (.NET)
 * MVVM Pattern
-* ObservableCollection
-* ICommand
-
----
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
